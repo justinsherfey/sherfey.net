@@ -1,2 +1,1 @@
-# sherfey.net
-sherfey.net website
+Work in progress.
