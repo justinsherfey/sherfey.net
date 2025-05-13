@@ -1,0 +1,126 @@
+:root {
+  --background-color: #0a0a0a; /* Very dark, almost black */
+  --primary-text-color: #00ff00; /* Bright green */
+  --secondary-text-color: #00ffff; /* Cyan */
+  --accent-color: #ff00ff; /* Magenta for highlights */
+  --border-color: #22ff22; /* Greenish border */
+  --font-family: "Courier New", Courier, monospace;
+  --scanline-opacity: 0.05;
+  --glitch-intensity: 5px;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 0, var(--scanline-opacity)),
+    rgba(0, 255, 0, var(--scanline-opacity)) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+  z-index: 9999; /* Ensure it's on top */
+  animation: scanlines 10s linear infinite;
+}
+
+@keyframes scanlines {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100px;
+  } /* Adjust speed by changing 100px */
+}
+a {
+  color: var(--secondary-text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 5px var(--accent-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--secondary-text-color);
+  text-shadow: 0 0 3px var(--secondary-text-color);
+  letter-spacing: 1px;
+}
+
+.container {
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 4rem 0;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.glitch-text {
+  animation: glitch 1.5s linear infinite;
+}
+
+@keyframes glitch {
+  2%,
+  64% {
+    transform: translate(var(--glitch-intensity), 0) skew(0deg);
+  }
+  4%,
+  60% {
+    transform: translate(calc(-1 * var(--glitch-intensity)), 0) skew(0deg);
+  }
+  62% {
+    transform: translate(0, 0) skew(5deg);
+  }
+}
+
+.blinking-cursor {
+  display: inline-block;
+  width: 10px; /* Adjust width as needed */
+  height: 1.2em; /* Match line height */
+  background-color: var(--primary-text-color);
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
