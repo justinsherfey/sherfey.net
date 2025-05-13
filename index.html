@@ -1,12 +1,202 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Sherfey.net Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Justin Sherfey - Cybersecurity Professional</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body bgcolor="#555555">
-    <h1> Justin Sherfey's Portfolio</h1>
-   TryHackMe Journal "Coming Soon"<br>
-Incident Handler’s Journal "Coming Soon"<br>
-Vulnerable System Analysis "Coming Soon"<br>
-SQL Query “Coming Soon”<br>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="#">[YOUR NAME] // CYBERSECURITY</a>
+        </div>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero-section">
+        <div class="hero-content">
+          <h1 id="hero-headline">Securing the Digital Frontier.</h1>
+          <p class="subtitle">
+            A dedicated and certified cybersecurity professional with a passion
+            for protecting systems and data.
+          </p>
+          <div class="certifications">
+            <span class="cert-tag">CompTIA A+</span>
+            <span class="cert-tag">CompTIA Network+</span>
+            <span class="cert-tag">CompTIA Security+</span>
+            <span class="cert-tag">Google Cybersecurity</span>
+          </div>
+          <a href="#portfolio" class="cta-button">View My Work</a>
+        </div>
+        <div class="hero-bg-overlay"></div>
+      </section>
+
+      <section id="about" class="content-section">
+        <h2>// About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I'm Justin, a cybersecurity enthusiast driven by the challenge of
+              navigating and securing the complex digital landscape. With a
+              solid foundation built upon industry-recognized certifications
+              like CompTIA A+, Network+, Security+, and the Google Cybersecurity
+              Certificate, I possess a comprehensive understanding of IT
+              infrastructure, network security, and threat mitigation.
+            </p>
+            <p>
+              My journey into cybersecurity is fueled by a proactive approach to
+              learning and a commitment to staying ahead of emerging threats. I
+              am adept at vulnerability assessment, incident response, network
+              analysis, and passionate about applying my knowledge to create
+              robust security solutions. I'm eager to contribute to a team that
+              values innovation and a strong security posture.
+            </p>
+          </div>
+          <!-- Optional: Add a professional headshot here -->
+          <!-- <img src="path/to/your-photo.jpg" alt="Your Name" class="profile-photo"> -->
+        </div>
+      </section>
+
+      <section id="portfolio" class="content-section alt-bg">
+        <h2>// Portfolio Highlights</h2>
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <img
+              src="https://via.placeholder.com/400x250/1a1a1a/00ff00?text=Project+Alpha"
+              alt="Project Alpha Screenshot"
+            />
+            <h3>Project Alpha: Network Security Audit</h3>
+            <p>
+              A comprehensive network security audit for a mock small business,
+              identifying vulnerabilities and recommending mitigation
+              strategies. Utilized tools like Nmap, Wireshark, and OpenVAS.
+            </p>
+            <a href="#" class="project-link" target="_blank"
+              >View Details (Optional)</a
+            >
+          </div>
+          <div class="portfolio-item">
+            <img
+              src="https://via.placeholder.com/400x250/1a1a1a/00ff00?text=Project+Beta"
+              alt="Project Beta Screenshot"
+            />
+            <h3>Project Beta: Secure Web Application Setup</h3>
+            <p>
+              Developed and deployed a secure web application, implementing
+              HTTPS, input validation, and secure authentication mechanisms.
+              Focused on OWASP Top 10 principles.
+            </p>
+            <a href="#" class="project-link" target="_blank"
+              >View Details (Optional)</a
+            >
+          </div>
+          <div class="portfolio-item">
+            <img
+              src="https://via.placeholder.com/400x250/1a1a1a/00ff00?text=Project+Gamma"
+              alt="Project Gamma Screenshot"
+            />
+            <h3>Project Gamma: Incident Response Simulation</h3>
+            <p>
+              Participated in a simulated incident response scenario, covering
+              detection, containment, eradication, and recovery phases.
+              Documented findings and lessons learned.
+            </p>
+            <a href="#" class="project-link" target="_blank"
+              >View Details (Optional)</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="content-section">
+        <h2>// Skills & Additional Projects</h2>
+        <div class="skills-projects-container">
+          <div class="skills-list">
+            <h3>Core Competencies:</h3>
+            <ul>
+              <li>Network Security & Protocols</li>
+              <li>Vulnerability Assessment</li>
+              <li>Incident Response & Handling</li>
+              <li>Security Information and Event Management (SIEM)</li>
+              <li>Operating System Security (Windows, Linux)</li>
+              <li>Cryptography Basics</li>
+              <li>Risk Management Frameworks</li>
+              <li>Python for Security Scripting (Beginner/Intermediate)</li>
+              <li>Cloud Security Fundamentals (AWS/Azure Basics)</li>
+            </ul>
+          </div>
+          <div class="additional-projects">
+            <h3>Further Explorations:</h3>
+            <p>
+              This space can be used to list smaller projects, home lab setups,
+              CTF participations, or specific tools you've mastered.
+            </p>
+            <ul>
+              <li>
+                <strong>Home Lab Setup:</strong> Virtualized environment for
+                testing security tools and configurations.
+              </li>
+              <li>
+                <strong>CTF Participation:</strong> Actively participate in
+                Capture The Flag competitions (e.g., TryHackMe, HackTheBox).
+              </li>
+              <li>
+                <strong>Security Tool Proficiency:</strong> Wireshark, Nmap,
+                Metasploit (Ethical Use), Burp Suite (Basics).
+              </li>
+              <!-- Add more as needed -->
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="content-section alt-bg">
+        <h2>// Get In Touch</h2>
+        <p>
+          I'm always open to discussing new opportunities, collaborations, or
+          just chatting about cybersecurity. Feel free to reach out!
+        </p>
+        <div class="contact-links">
+          <a href="mailto:your.email@example.com" class="contact-button"
+            >Email Me</a
+          >
+          <a
+            href="https://linkedin.com/in/yourprofile"
+            target="_blank"
+            class="contact-button"
+            >LinkedIn</a
+          >
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            class="contact-button"
+            >GitHub</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; <span id="currentYear"></span> [Your Name]. All rights reserved.
+        // Mission: Secure & Protect
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
